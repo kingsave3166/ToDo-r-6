@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3em;
+  font-family: Helvetica, sans-serif;
+}
+
+button {
+  font-size: 1.3em;
+  outline: none;
+}
+input {
+  font-size: 1.3em;
+  outline: none;
+}
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.name {
+  position: absolute;
+  top: -90px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  color: rgba(73, 70, 170, 0.24);
+}
+
+.contain {
+  width: 400px;
+  box-shadow: rgba(4, 41, 160, 0.4) 0px 2px 20px 0px;
+
+  border-image: initial;
+  padding: 25px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.contain form {
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.53);
+}
+
+.input-text {
+  border: 0;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px 0 0 5px;
+}
+.input-text:first-letter {
+  text-transform: uppercase;
+}
+.input-btn {
+  width: 120px;
+  height: 35px;
+  border: 0;
+}
+.input-btn:hover {
+  color: #4946aa;
+}
+.list {
+  height: 40vh;
+  overflow: scroll;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1em;
+}
+
+.list > li {
+  list-style: none;
+  padding-left: -40px;
+  -webkit-padding-start: 0px;
+}
+
+.delete {
+  width: 100%;
+  font-size: 1em;
+  border: 0;
+  background: 0;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.delete:hover {
+  color: #4946aa;
+}
+
+.item {
+  width: 97%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  align-items: center;
+  margin: 5px;
+  padding: 10px 0;
+  border-radius: 8px;
+}
+.item:hover .item-del {
+  opacity: 1;
+}
+.item:hover {
+  box-shadow: rgba(4, 41, 160, 0.4) 0px 2px 5px 0px;
+}
+.checkbox:checked ~ .item-text {
+  text-decoration: line-through;
+  color: #656565;
+}
+
+.item-text {
+  width: 78%;
+  word-wrap: break-word;
+}
+
+.item-text:first-letter {
+  text-transform: uppercase;
+}
+
+.item-del {
+  right: 0;
+  position: absolute;
+  opacity: 0;
+  transform: rotate(45deg);
+  font-size: 1.5em;
+  border: 0;
+  background: 0;
+  color: #828282;
+}
+.item-del:hover {
+  color: #4946aa;
+}
